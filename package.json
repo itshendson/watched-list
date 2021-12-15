@@ -1,0 +1,23 @@
+{
+  "name": "my-collection",
+  "version": "1.0.0",
+  "description": "Project to showcase your shows, books, animes, video games",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itshendson/My-Collection.git"
+  },
+  "author": "Hendson Szeto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/itshendson/My-Collection/issues"
+  },
+  "homepage": "https://github.com/itshendson/My-Collection#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
