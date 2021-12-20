@@ -12,6 +12,9 @@ app.get('/', (req, res) => {
 });
 
 app.use('/anime', animeRoute);
+app.use('/books', bookRoute);
+app.use('/television', televisionRoute);
+app.use('/game', gameRoute);
 
 app.listen(PORT, (err)=> {
     if (err) console.log(err);
