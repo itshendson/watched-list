@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Project to showcase your shows, books, animes, video games",
   "main": "server.js",
+  "type": "module",
   "scripts": {
     "devStart": "nodemon server.js"
   },
