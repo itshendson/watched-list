@@ -1,4 +1,4 @@
-"# My-Collection" 
+"# Watched List" 
 
 Work in progress:
 
