@@ -24,8 +24,8 @@ app.use('/game', gameRoute);
 
 mongoose.connect(
     process.env.DB_STRING,
-    { useNewUrlParser: true},
-    console.log('DB connected!')
+    { useNewUrlParser: true },
+    console.log(mongoose.connection.readyState)
 );
 
 app.listen(PORT, (err)=> {
