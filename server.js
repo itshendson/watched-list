@@ -1,15 +1,14 @@
-import express from 'express';
-import mongoose from 'mongoose';
-import dotenv from 'dotenv';
+const express = require('express');
+const mongoose = require('mongoose');
+require('dotenv').config();
 
-import { router as animeRoute } from './routes/anime.js';
-import { router as bookRoute } from './routes/books.js';
-import { router as televisionRoute } from './routes/television.js';
-import { router as gameRoute } from './routes/games.js';
+const animeRoute = require('./routes/anime.js');
+const bookRoute = require('./routes/books.js');
+const televisionRoute = require('./routes/television.js');
+const gameRoute = require('./routes/games.js');
 
 const PORT = process.env.PORT || 3000;
 const app = express();
-dotenv.config();
 
 app.get('/', (req, res) => {
     res.send('Hello Worlds!')
