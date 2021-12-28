@@ -1,6 +1,6 @@
-import express, { response } from 'express';
-import fetch from 'node-fetch';
-export const router = express.Router();
+const express = require('express');
+const router = express.Router();
+const fetch = require('node-fetch');
 
 router.get('/', async (req, res) => {
     const ani_url = 'https://api.jikan.moe/v3/search/anime?q=death_note&limit=8';
@@ -16,3 +16,5 @@ router.get('/', async (req, res) => {
 router.post('/', (req, res) => {
 
 })
+
+module.exports = router;

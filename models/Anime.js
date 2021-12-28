@@ -1,7 +1,7 @@
-import express from 'express';
-import mongoose from 'mongoose';
+const express = require('express');
+const mongoose = require('mongoose');
 
-export const AnimeSchema = mongoose.Schema({
+const AnimeSchema = mongoose.Schema({
     title: {
         Type: String,
         required: true
