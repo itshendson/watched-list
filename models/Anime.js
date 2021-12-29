@@ -1,21 +1,18 @@
-const express = require('express');
 const mongoose = require('mongoose');
 
 const AnimeSchema = mongoose.Schema({
     title: {
-        Type: String,
+        type: String,
         required: true
     },
     image_url: {
-        Type: String,
-        required: true
-    },
-    type: {
-        Type: String,
+        type: String,
         required: true
     },
     Synopsis: {
-        Type: String,
+        type: String,
         required: true
     }
 });
+
+module.exports = mongoose.model('Anime', AnimeSchema)

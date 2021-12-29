@@ -1,6 +1,12 @@
 const express = require('express');
 const router = express.Router();
 const fetch = require('node-fetch');
+const AnimeModel = require('../models/Anime');
+
+const app = express();
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 router.get('/', async (req, res) => {
     const ani_url = 'https://api.jikan.moe/v3/search/anime?q=death_note&limit=8';
@@ -14,7 +20,7 @@ router.get('/', async (req, res) => {
 });
 
 router.post('/', (req, res) => {
-
+    console.log(req.body);
 })
 
 module.exports = router;
