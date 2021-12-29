@@ -9,7 +9,7 @@ const AnimeSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    Synopsis: {
+    description: {
         type: String,
         required: true
     }
