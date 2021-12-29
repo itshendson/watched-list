@@ -15,20 +15,20 @@ const AnimeModel = require('../models/Anime');
 //     res.status(200).send(ani_res_obj);
 // });
 
-router.post('/', (req, res) => {
+router.post('/', async (req, res) => {
     const animeModel = new AnimeModel({
         title: req.body.title,
         image_url: req.body.image_url,
         description: req.body.description,
     })
 
-    animeModel.save()
-    .then(data => {
-        res.status(200).json(data);
-    })
-    .catch(err => {
+    try{
+        const savedAnime = await animeModel.save();
+        res.json(savedAnime);
+    }catch(err){
         res.json({ message: err });
-    })
+    }
+    
 });
 
 module.exports = router;
