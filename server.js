@@ -29,5 +29,5 @@ db.once("open", function () {
 
 app.listen(PORT, (err)=> {
     if (err) console.log(err);
-    console.log(`Listening on port ${PORT}`)
+    console.log(`Listening on port ${PORT}`);
 });
