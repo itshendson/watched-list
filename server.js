@@ -13,14 +13,14 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.get('/', (req, res) => {
-    res.send('Hello Worlds!')
-});
-
 app.use('/anime', animeRoute);
 app.use('/books', bookRoute);
 app.use('/television', televisionRoute);
 app.use('/game', gameRoute);
+
+app.get('/', (req, res) => {
+  res.send('Hello Worlds!')
+});
 
 mongoose.connect(process.env.DB_STRING, {useNewUrlParser: true, useUnifiedTopology: true});
 
