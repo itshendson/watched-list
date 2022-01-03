@@ -15,6 +15,8 @@ Problems:
 
 3. Trying to learn and get Passport Local to work. May have to use Passport JWT instead.
 
+4. Changed GitHub repo to private to prevent bots from cloning my repo automatically.
+
 ## Technologies
 - JavaScript
 - Node.js
