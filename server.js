@@ -13,6 +13,9 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+/**
+ * ---------------- ROUTES TO API ----------------
+ */
 app.use('/anime', animeRoute);
 app.use('/books', bookRoute);
 app.use('/television', televisionRoute);
@@ -22,6 +25,11 @@ app.get('/', (req, res) => {
   res.send('Hello Worlds!')
 });
 
+
+
+/**
+ * ---------------- DATABASE ----------------
+ */
 mongoose.connect(process.env.DB_STRING, {useNewUrlParser: true, useUnifiedTopology: true});
 
 const db = mongoose.connection;
@@ -30,6 +38,11 @@ db.once("open", () => {
   console.log("Connected successfully");
 });
 
+
+
+/**
+ * ---------------- SERVER ----------------
+ */
 app.listen(PORT, (err)=> {
     if (err) console.log(err);
     console.log(`Listening on port ${PORT}`);
