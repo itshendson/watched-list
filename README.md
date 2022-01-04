@@ -21,7 +21,7 @@ Problems:
 - JavaScript
 - Node.js
 - Express.js
-- Passport Local Strategy or Passport JWT
+- Passport Local Strategy or Passport JWT or Passport Google Strategy?
 - Mongoose
 - Express Cookie Session
 
