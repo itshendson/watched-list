@@ -26,3 +26,11 @@ Problems:
 - Express Cookie Session
 
 
+## Resources
+List of the best resources I've encountered for future reference
+
+Clear explanation of passport local and cookie sessions
+https://levelup.gitconnected.com/everything-you-need-to-know-about-the-passport-local-passport-js-strategy-633bbab6195
+
+Example of Passport Google Strategy with OAuth
+https://medium.com/@prashantramnyc/how-to-implement-google-authentication-in-node-js-using-passport-js-9873f244b55e
