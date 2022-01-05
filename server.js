@@ -1,4 +1,5 @@
 const express = require('express');
+const connectDatabase = require('./config/database');
 const mongoose = require('mongoose');
 require('dotenv').config();
 
@@ -13,6 +14,8 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+connectDatabase();
+
 /**
  * ---------------- ROUTES TO API ----------------
  */
@@ -24,21 +27,6 @@ app.use('/game', gameRoute);
 app.get('/', (req, res) => {
   res.send('Hello Worlds!')
 });
-
-
-
-/**
- * ---------------- DATABASE ----------------
- */
-mongoose.connect(process.env.DB_STRING, {useNewUrlParser: true, useUnifiedTopology: true});
-
-const db = mongoose.connection;
-db.on("error", console.error.bind(console, "connection error: "));
-db.once("open", () => {
-  console.log("Connected successfully");
-});
-
-
 
 /**
  * ---------------- SERVER ----------------
