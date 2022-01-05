@@ -11,6 +11,7 @@ const animeRoute = require('./routes/anime.js');
 const bookRoute = require('./routes/books.js');
 const televisionRoute = require('./routes/television.js');
 const gameRoute = require('./routes/games.js');
+const indexRoute = require('./routes/index.js');
 
 const PORT = process.env.PORT || 3000;
 const app = express();
@@ -40,10 +41,7 @@ app.use('/anime', animeRoute);
 app.use('/books', bookRoute);
 app.use('/television', televisionRoute);
 app.use('/game', gameRoute);
-
-app.get('/', (req, res) => {
-  res.send('Hello Worlds!')
-});
+app.use('/', indexRoute);
 
 /**
  * ---------------- SERVER ----------------
