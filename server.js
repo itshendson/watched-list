@@ -20,7 +20,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Session
+// Sessions
 app.use(session({
   secret: 'keyboard cat',
   resave: false,
