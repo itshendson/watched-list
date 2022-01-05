@@ -4,7 +4,7 @@ const passport = require('passport');
 const mongoose = require('mongoose');
 require('dotenv').config();
 
-const connectDatabase = require('./config/database');
+const connectDatabase = require('./config/database.js');
 require('./config/passport.js')(passport);
 
 const animeRoute = require('./routes/anime.js');
