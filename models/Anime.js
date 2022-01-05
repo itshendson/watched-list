@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const AnimeSchema = mongoose.Schema({
+const AnimeSchema = new mongoose.Schema({
     title: {
         type: String,
         required: true
