@@ -7,12 +7,6 @@ require('dotenv').config();
 const connectDatabase = require('./config/database.js');
 require('./config/passport.js')(passport);
 
-const animeRoute = require('./routes/anime.js');
-const bookRoute = require('./routes/books.js');
-const televisionRoute = require('./routes/television.js');
-const gameRoute = require('./routes/games.js');
-const indexRoute = require('./routes/index.js');
-
 const PORT = process.env.PORT || 3000;
 const app = express();
 
@@ -37,11 +31,12 @@ connectDatabase();
 /**
  * ---------------- ROUTES TO API ----------------
  */
-app.use('/anime', animeRoute);
-app.use('/books', bookRoute);
-app.use('/television', televisionRoute);
-app.use('/game', gameRoute);
-app.use('/', indexRoute);
+app.use('/', require('./routes/index.js'));
+app.use('/auth', require('./routes/auth.js')); 
+app.use('/anime', require('./routes/anime.js'));
+app.use('/books', require('./routes/books.js'));
+app.use('/television', require('./routes/television.js'));
+app.use('/game', require('./routes/games.js'));
 
 /**
  * ---------------- SERVER ----------------
@@ -50,8 +45,3 @@ app.listen(PORT, (err)=> {
     if (err) console.log(err);
     console.log(`Listening on port ${PORT}`);
 });
-
-/**
- * ---------------- SERVER ----------------
- */
-app.get('/auth/google', passport.authenticate('google', { scope: ['email', 'profile'] }));
