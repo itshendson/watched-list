@@ -17,6 +17,9 @@ Problems:
 
 4. Changed GitHub repo to private to prevent bots from cloning my repo automatically.
 
+## Amazing Keyboard Shortcuts
+- You can use ctrl + shift + \ to jump to the opening/closing bracket/braces!!!
+
 ## Pages That I Need
 - /search - ANYONE, logged in or not, should be able to see this page (but only users logged in can add)
 - /:id - ANYONE, logged in or not, should be able to see this page (but only users logged in can edit)
