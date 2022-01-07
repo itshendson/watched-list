@@ -17,6 +17,11 @@ Problems:
 
 4. Changed GitHub repo to private to prevent bots from cloning my repo automatically.
 
+## Pages That I Need
+- /search - ANYONE, logged in or not, should be able to see this page (but only users logged in can add)
+- /:id - ANYONE, logged in or not, should be able to see this page (but only users logged in can edit)
+- / - home page, explaining the app and with a google login button
+
 ## Technologies
 - JavaScript
 - Node.js
