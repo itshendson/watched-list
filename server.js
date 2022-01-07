@@ -10,22 +10,30 @@ require('./config/passport.js')(passport);
 const PORT = process.env.PORT || 3000;
 const app = express();
 
-// Body-parser middleware
+/**
+ * ---------------- BODY-PARSER MIDDLEWARE ----------------
+ */
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Sessions
+/**
+ * ---------------- COOKIE SESSION ----------------
+ */
 app.use(session({
   secret: 'keyboard cat',
   resave: false,
   saveUninitialized: false
 }))
 
-//Passport middleware
+/**
+ * ---------------- PASSPORT MIDDLEWARE ----------------
+ */
 app.use(passport.initialize());
 app.use(passport.session());
 
-// Connect to mongoDB
+/**
+ * ---------------- CONNECT TO MONGODB ATLAS ----------------
+ */
 connectDatabase();
 
 /**
