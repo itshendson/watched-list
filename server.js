@@ -1,7 +1,8 @@
 const express = require('express');
 const session = require('express-session');
-const passport = require('passport');
+const MongoStore = require('connect-mongo');
 const mongoose = require('mongoose');
+const passport = require('passport');
 require('dotenv').config();
 
 const connectDatabase = require('./config/database.js');
@@ -21,9 +22,10 @@ app.use(express.urlencoded({ extended: true }));
  * ---------------- COOKIE SESSION ----------------
  */
 app.use(session({
-  secret: 'keyboard cat',
+  secret: process.env.SESSION_SECRET,
   resave: false,
-  saveUninitialized: false
+  saveUninitialized: false,
+  store: MongoStore.create({ mongoUrl: process.env.DB_STRING })  
 }))
 
 
