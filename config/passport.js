@@ -5,24 +5,24 @@ require('dotenv').config();
 
 module.exports = (passport) => {
   const authUser = async (accessToken, refreshToken, profile, done) => {
-    // const newUser = {
-    //   googleId: profile.clientID
-    // }
+    const newUser = {
+      googleId: profile.id,
+      displayName: profile.displayName,
+      email: profile._json.email
+    }
 
-    // try {
-    //   let user = await User.findOne({ googleId: profile.id })
+    try {
+      let user = await User.findOne({ googleId: profile.id })
 
-    //   if (user) {
-    //     done(null, user)
-    //   } else {
-    //     user = await User.create(newUser)
-    //     done(null, user)
-    //   }
-    // } catch (err) {
-    //   console.error(err)
-    // }
-
-    console.log(profile);
+      if (user) {
+        done(null, user)
+      } else {
+        user = await User.create(newUser)
+        done(null, user)
+      }
+    } catch (err) {
+      console.error(err)
+    }
   }
 
   passport.use(new GoogleStrategy({
