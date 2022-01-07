@@ -16,6 +16,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+
 /**
  * ---------------- COOKIE SESSION ----------------
  */
@@ -25,16 +26,19 @@ app.use(session({
   saveUninitialized: false
 }))
 
+
 /**
  * ---------------- PASSPORT MIDDLEWARE ----------------
  */
 app.use(passport.initialize());
 app.use(passport.session());
 
+
 /**
  * ---------------- CONNECT TO MONGODB ATLAS ----------------
  */
 connectDatabase();
+
 
 /**
  * ---------------- ROUTES TO API ----------------
@@ -45,6 +49,7 @@ app.use('/anime', require('./routes/anime.js'));
 app.use('/books', require('./routes/books.js'));
 app.use('/television', require('./routes/television.js'));
 app.use('/game', require('./routes/games.js'));
+
 
 /**
  * ---------------- SERVER ----------------
