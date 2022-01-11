@@ -25,7 +25,8 @@
     "mongoose": "^6.1.4",
     "node-fetch": "^2.6.6",
     "passport": "^0.5.2",
-    "passport-google-oauth20": "^2.0.0"
+    "passport-google-oauth20": "^2.0.0",
+    "tar": "^6.1.11"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
