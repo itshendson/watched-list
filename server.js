@@ -3,6 +3,7 @@ const session = require('express-session');
 const MongoStore = require('connect-mongo');
 const mongoose = require('mongoose');
 const passport = require('passport');
+const sors = require('cors');
 require('dotenv').config();
 
 const connectDatabase = require('./config/database.js');
@@ -16,6 +17,7 @@ const app = express();
  */
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(cors());
 
 
 /**
