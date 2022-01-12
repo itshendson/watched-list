@@ -1,14 +1,14 @@
 const express = require('express');
 const session = require('express-session');
 const MongoStore = require('connect-mongo');
-const mongoose = require('mongoose');
 const passport = require('passport');
+const cors = require('cors');
 require('dotenv').config();
 
 const connectDatabase = require('./config/database.js');
 require('./config/passport.js')(passport);
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 const app = express();
 
 /**
@@ -16,6 +16,7 @@ const app = express();
  */
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(cors());
 
 
 /**

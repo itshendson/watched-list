@@ -21,6 +21,8 @@ Problems:
 
 4. Changed GitHub repo to private to prevent bots from cloning my repo automatically.
 
+5. Need to create user specific routes
+
 ## Amazing Keyboard Shortcuts
 - You can use ctrl + shift + \ to jump to the opening/closing bracket/braces!!!
 
