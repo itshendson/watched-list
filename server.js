@@ -8,7 +8,7 @@ require('dotenv').config();
 const connectDatabase = require('./config/database.js');
 require('./config/passport.js')(passport);
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3080;
 const app = express();
 
 /**
