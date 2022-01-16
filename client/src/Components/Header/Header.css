@@ -7,6 +7,7 @@
 #header-container {
     background-color: lightblue;
     height: 50px;
+    min-width: 1000px;
     width: 100%;
 }
 
@@ -19,7 +20,7 @@
 #header-login-container {
     float: right;
     padding-right: 20px;
-    padding-top: 6.5px;
+    padding-top: 0px;
 }
 
 ui {
@@ -29,6 +30,7 @@ ui {
 li {
     display: inline-block;
     padding-right: 50px;
+    padding-top: 6px;
 }
 
 #header-container a {

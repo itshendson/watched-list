@@ -21,8 +21,8 @@ function Header() {
               </a>
             </li>
             <li>
-              <a href="http://localhost:3080/login" className="btn red darken-1 toggle">
-                <i class="fab fa-google left"></i> Log In With Google
+              <a href="http://localhost:3080/login" className="btn red darken-1 toggle google-btn">
+                <i className="fab fa-google left"></i> Log In With Google
               </a>
             </li>
             <li>
