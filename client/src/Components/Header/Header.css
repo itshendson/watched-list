@@ -1,5 +1,36 @@
+* {
+    box-sizing: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+
 #header-container {
-    background-color: blue;
-    height: 100px;
+    background-color: lightblue;
+    height: 50px;
     width: 100%;
+}
+
+#header-title {
+    float: left;
+    margin-top: -6.5px;
+    padding-left: 75px;
+}
+
+#header-login-container {
+    float: right;
+    padding-right: 20px;
+    padding-top: 6.5px;
+}
+
+ui {
+    list-style-type: none;
+}
+
+li {
+    display: inline-block;
+    padding-right: 50px;
+}
+
+.toggle {
+    /* display: hidden; */
 }
