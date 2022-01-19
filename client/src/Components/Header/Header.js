@@ -1,12 +1,7 @@
-import { useState } from 'react';
 import './Header.css';
 
 function Header() {
-  const [loggedIn, setLoggedIn] = useState('false');
-
-  const toggleDisplayNone = {
-    display: ""
-  }
+  const user = true;
 
   return (
     <div id="header-container">
@@ -15,30 +10,19 @@ function Header() {
             watched list
           </h5>
         </div>
-        <div id="header-login-container">
-          <ui>
-            <li>
-              <a href="http://localhost:3080/" style={toggleDisplayNone} className="toggle">
-                My Watched List
-              </a>
-            </li>
-            <li>
-              <a href="http://localhost:3080/" style={toggleDisplayNone} className="toggle">
-                Account
-              </a>
-            </li>
-            <li>
-              <a href="http://localhost:3080/login" style={toggleDisplayNone} className="btn red darken-1 toggle google-btn">
-                <i className="fab fa-google left"></i> Log In With Google
-              </a>
-            </li>
-            <li>
-              <a href="http://localhost:3080/auth/logout" style={toggleDisplayNone} className="toggle">
-                Logout
-              </a>
-            </li>
-          </ui>
-        </div>
+
+        {
+          user ?
+            <div id="header-login-container">
+              <ui>
+                <li><a href="http://localhost:3080/">My Watched List</a></li>
+                <li><a href="http://localhost:3080/">Account</a></li>
+                <li><a href="http://localhost:3000">Logout</a></li>
+              </ui>
+            </div>
+          :
+          <li><a href="http://localhost:3080/login" className="btn red darken-1"><i className="fab fa-google left"></i> Log In With Google</a></li>
+        }
     </div>
   );
 }
