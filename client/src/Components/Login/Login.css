@@ -1,0 +1,15 @@
+.login-container {
+    background-color: lightgray;
+    border: black;
+    border-radius: 10px;
+    margin: 40px auto;
+    padding: 1px 20px 30px;
+    width: 400px;
+    
+}
+
+.description-box {
+    align-content: center;
+    margin-bottom: 100px;
+    text-align: justify;
+}

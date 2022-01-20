@@ -17,7 +17,7 @@
     padding-left: 75px;
 }
 
-#navbar-login-container {
+#navbar-menu {
     float: right;
     padding-right: 20px;
     padding-top: 0px;
@@ -30,17 +30,14 @@ ui {
 li {
     display: inline-block;
     padding-right: 50px;
-    padding-top: 6px;
+    padding-top: 12px;
+    font-size: medium;
 }
 
-#navbar-container a {
+#navbar-container.a {
     text-transform: uppercase;
 }
 
 #navbar-container a:hover {
     color: black;
-}
-
-.toggle {
-    /* display: hidden; */
 }
