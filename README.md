@@ -48,3 +48,6 @@ https://levelup.gitconnected.com/everything-you-need-to-know-about-the-passport-
 
 Example of Passport Google Strategy with OAuth
 https://medium.com/@prashantramnyc/how-to-implement-google-authentication-in-node-js-using-passport-js-9873f244b55e
+
+Explanation of react-router-dom. Unfortunately not for ver. 6.2.1
+https://blog.logrocket.com/react-router-dom-tutorial-examples/

@@ -4,20 +4,20 @@
     padding: 0px;
 }
 
-#header-container {
+#navbar-container {
     background-color: lightblue;
     height: 50px;
     min-width: 1000px;
     width: 100%;
 }
 
-#header-title {
+#navbar-title {
     float: left;
     margin-top: -6.5px;
     padding-left: 75px;
 }
 
-#header-login-container {
+#navbar-menu {
     float: right;
     padding-right: 20px;
     padding-top: 0px;
@@ -30,17 +30,14 @@ ui {
 li {
     display: inline-block;
     padding-right: 50px;
-    padding-top: 6px;
+    padding-top: 12px;
+    font-size: medium;
 }
 
-#header-container a {
+#navbar-container.a {
     text-transform: uppercase;
 }
 
-#header-container a:hover {
+#navbar-container a:hover {
     color: black;
-}
-
-.toggle {
-    /* display: hidden; */
 }

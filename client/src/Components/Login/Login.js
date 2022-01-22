@@ -3,15 +3,11 @@ import './Login.css';
 function Login() {
   return (
     <div className="login-container">
-      <div className="section">
       <h2>Watched List</h2>
-        <p>Watched List is an app to store your favorite television show, books, anime, and video games. Get started by logging in through Google.</p>
-      </div>
-      <div className="section">
+        <p className='description-box'>Watched List is an application to save your favorite television show, books, anime, and video games. Share your unique link to showcase your watched list. Login to get started.</p>
         <a href="http://localhost:3080/auth/google" class="btn red darken-1">
           <i class="fab fa-google left"></i> Log In With Google
         </a>
-      </div>
     </div>
   );
 }
