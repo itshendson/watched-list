@@ -14,11 +14,11 @@ function Navbar() {
         <div id="navbar-menu">
         {
           user ?
-            <ui>
+            <ul>
               <li><a href="http://localhost:3000/mylist">My Watched List</a></li>
               <li><a href="http://localhost:3000/account">Account</a></li>
               <li><a href="http://localhost:3080/auth/logout">Logout</a></li>
-            </ui>
+            </ul>
           : <li><a href="http://localhost:3000/login" className="login-btn">Login</a></li>
         }
         </div>
