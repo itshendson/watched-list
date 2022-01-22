@@ -4,13 +4,16 @@ const router = express.Router();
 
 router.get('/google', passport.authenticate('google', { scope: ['email', 'profile'] }));
 
+//TODO IDEA IS TO put useDispatch() here to STORE data about the user profile so that I can use it in different Components
 router.get('/google/callback',
   passport.authenticate('google', { failureRedirect: 'http://localhost:3000/login', failureMessage: true }),
   function(req, res) {
+    console.log(`Login: ${req.id}, ${res.id}`); 
     res.redirect('http://localhost:3000/');
 });
 
 router.get('/logout', (req, res) => {
+  console.log(`Logout: ${req}`);
   req.logout();
   res.redirect('http://localhost:3000/');
 });
