@@ -8,12 +8,10 @@ router.get('/google', passport.authenticate('google', { scope: ['email', 'profil
 router.get('/google/callback',
   passport.authenticate('google', { failureRedirect: 'http://localhost:3000/login', failureMessage: true }),
   function(req, res) {
-    console.log(`Login: ${req.id}, ${res.id}`); 
     res.redirect('http://localhost:3000/');
 });
 
 router.get('/logout', (req, res) => {
-  console.log(`Logout: ${req}`);
   req.logout();
   res.redirect('http://localhost:3000/');
 });
