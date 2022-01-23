@@ -1,7 +1,20 @@
+import { useEffect, useState } from "react";
 import './Navbar.css';
 
 function Navbar() {
-  const user = true;
+  const { user, setUser } = useState();
+
+  useEffect(() => {
+    const fetchProfile = async () => {
+      const options = {
+        method: 'GET'
+      }
+
+      const profile = await fetch('http://localhost:3080/profile', options);
+      console.log(profile);
+    }
+    fetchProfile();
+  }, []);
 
   return (
     <div id="navbar-container">
