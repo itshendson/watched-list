@@ -8,9 +8,10 @@ module.exports = (passport) => {
     const newUser = {
       googleId: profile.id,
       displayName: profile.displayName,
-      email: profile._json.email
+      email: profile._json.email,
+      image: profile.photos[0].value
     }
-
+    
     try {
       let user = await User.findOne({ googleId: profile.id })
 
