@@ -2,17 +2,15 @@ import { useEffect, useState } from "react";
 import './Navbar.css';
 
 function Navbar() {
-  const { user, setUser } = useState();
+  const [user, setUser] = useState();
 
   useEffect(() => {
     const fetchProfile = async () => {
-      const options = {
-        method: 'GET'
-      }
-
-      const profile = await fetch('http://localhost:3080/profile', options);
+      const profile = await fetch('http://localhost:3080/profile', {method: 'GET'});
       console.log(profile);
+      setUser(profile.data);
     }
+
     fetchProfile();
   }, []);
 
@@ -21,6 +19,7 @@ function Navbar() {
         <div id="navbar-title">
           <h5>
           <a href="http://localhost:3000/">watched list</a>
+          <p style={{'marginTop': '50px'}}>TEST: {user}</p>
           </h5>
         </div>
 
