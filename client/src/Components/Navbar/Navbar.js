@@ -6,7 +6,8 @@ function Navbar() {
 
   useEffect(() => {
     const fetchProfile = async () => {
-      const profile = await fetch('http://localhost:3080/profile', {method: 'GET'});
+      const response = await fetch('http://localhost:3080/profile', {method: 'GET'});
+      const profile = await response.json();
       console.log(profile);
       setUser(profile.data);
     }
