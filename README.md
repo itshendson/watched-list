@@ -1,5 +1,7 @@
 ## Watched List
 
+### UPDATE: Changing priorities. I will be working on this project at a much lower pace in favor of practicing leetcode style questions ###
+
 WORK IN PROGRESS
 
 ## Idea
