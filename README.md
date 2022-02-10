@@ -1,8 +1,8 @@
 ## Watched List 
 
-### UPDATE: This project is put on hold. I will be reprioritizing my time to focus on leetcode style problems. ###
+### UPDATE: This project is put on hold. I am reprioritizing my time away from projects to focus on leetcode type problems and other programming challenges. ###
 
-WORK IN PROGRESS
+
 
 ## Idea
 
